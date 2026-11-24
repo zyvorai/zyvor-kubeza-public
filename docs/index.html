@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zyvor Kubeza: Kubernetes for the edge, made calm</title>
+<meta name="description" content="A small Kubernetes distribution for edge sites and private clouds, built on K3s. Setura Gateway API controller and the zkube-net CNI built in. One binary, offline-first, no phone-home.">
+<link rel="canonical" href="https://zyvorai.github.io/zyvor-kubeza-public/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zyvor Kubeza">
+<meta property="og:title" content="Zyvor Kubeza: Kubernetes for the edge, made calm">
+<meta property="og:description" content="Small Kubernetes for edge sites and private clouds. Gateway API and CNI built in. One binary, offline-first, no phone-home.">
+<meta property="og:url" content="https://zyvorai.github.io/zyvor-kubeza-public/">
+<meta property="og:image" content="https://zyvorai.github.io/zyvor-kubeza-public/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zyvor Kubeza: Kubernetes for the edge, made calm.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zyvor Kubeza: Kubernetes for the edge, made calm">
+<meta name="twitter:description" content="Small Kubernetes for edge sites and private clouds. Gateway API and CNI built in. One binary, offline-first, no phone-home.">
+<meta name="twitter:image" content="https://zyvorai.github.io/zyvor-kubeza-public/og-image.png">
+<meta name="twitter:image:alt" content="Zyvor Kubeza: Kubernetes for the edge, made calm.">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="assets/site.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="#top"><img src="favicon.svg" alt="" width="22" height="22">Zyvor Kubeza</a>
+<nav aria-label="Primary" style="display:contents">
+<a class="hide-sm" href="#features">Features</a>
+<a class="hide-sm" href="#network">Network</a>
+<a class="hide-sm" href="#quickstart">Quickstart</a>
+<a class="hide-sm" href="#status">Status</a>
+<span class="spacer"></span>
+<a class="buy" href="#access">Early access</a>
+</nav></div></header>
+<main id="main">
+<section class="hero" id="top" style="padding-bottom:0">
+<div class="wrap">
+<p class="eyebrow">Zyvor Kubeza <span class="badge">Early access</span></p>
+<h1>Kubernetes for the edge.<br><span class="grad">Made calm.</span></h1>
+<p class="lede">A small Kubernetes distribution for edge sites and private clouds. Built on K3s, with the gateway and the network already in the box. One binary.</p>
+<div class="cta"><a class="btn primary" href="#access">Request early access</a><a class="btn ghost" href="#quickstart">See the quickstart</a></div>
+<div class="pills" aria-label="Highlights"><span class="pill">Setura Gateway API</span><span class="pill">zkube-net CNI</span><span class="pill">One Go binary</span><span class="pill">Offline-first</span><span class="pill">No phone-home</span></div>
+<div class="terminal" role="img" aria-label="Terminal mock of zkube plan, install and doctor commands" style="margin-top:48px">
+<div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre aria-hidden="true"><span class="line" style="--i:0"><span class="dim">$</span> zkube plan server</span>
+<span class="line" style="--i:1"><span class="dim">  Offline. Nothing has been changed. Review, then install.</span></span>
+<span class="line" style="--i:2"> </span>
+<span class="line" style="--i:3"><span class="dim">$</span> sudo zkube install server</span>
+<span class="line" style="--i:4"><span class="dim">$</span> sudo zkube doctor --smoke</span>
+<span class="line" style="--i:5"><span class="ok">&#10003;</span> nodes  <span class="ok">&#10003;</span> gateway  <span class="ok">&#10003;</span> a real request   <span class="dim">illustrative</span></span></pre>
+</div>
+</div>
+</section>
+
+<section id="why"><div class="wrap">
+<p class="kicker reveal">Why</p>
+<h2 class="reveal">Edge clusters should be boring.</h2>
+<p class="sub reveal">You run clusters in shops, plants and racks nobody visits. Kubeza decides the pieces an edge site needs, ships them together, and gives you one tool to check, install, upgrade and back them up.</p>
+<div class="grid">
+<div class="card reveal"><span class="tag">Small</span><h3>Built on K3s</h3><p>A pinned, checksum-verified upstream K3s underneath. Kubeza does not fork or patch it.</p></div>
+<div class="card reveal"><span class="tag">Complete</span><h3>Gateway and network included</h3><p>Setura, a Gateway API controller, replaces the default ingress. zkube-net is the built-in CNI. No assembly.</p></div>
+<div class="card reveal"><span class="tag">Calm</span><h3>Dry run first</h3><p><code>zkube plan</code> shows every file before install. Commands that change something have <code>--dry-run</code>.</p></div>
+</div></div></section>
+
+<section id="features" class="alt"><div class="wrap">
+<p class="kicker reveal">Features</p>
+<h2 class="reveal">Everything one binary can carry.</h2>
+<div class="grid">
+<div class="card reveal"><h3>One stdlib-only binary</h3><p><code>zkube</code> is a single Go binary with no third-party dependencies. Install, join nodes, upgrade, back up and audit from one command line.</p></div>
+<div class="card reveal"><h3>Setura Gateway built in</h3><p>The Gateway API CRDs and the Setura controller come with the distribution instead of Traefik. Migration helpers convert existing Ingresses.</p></div>
+<div class="card reveal"><h3>zkube-net, the built-in CNI</h3><p>Our own CNI with nftables NetworkPolicy enforcement and a node self-test. Choose it with <code>--cni zkube</code>.</p></div>
+<div class="card reveal"><h3>Offline-first</h3><p>Build a bundle with checksums on a connected machine, carry it to an air-gapped site, install with <code>--offline</code>.</p></div>
+<div class="card reveal"><h3>Pinned add-ons</h3><p>cert-manager, KubeVirt and CDI are pinned to real upstream releases and verified by sha256 at enable time.</p></div>
+<div class="card reveal"><h3>Doctor and smoke</h3><p><code>zkube doctor --smoke</code> checks nodes, CRDs, the GatewayClass and the controller, then sends a real request. Every check comes with a fix.</p></div>
+<div class="card reveal"><h3><code>--json</code> everywhere</h3><p>Every command with output can emit JSON, so scripts and fleet tooling never parse prose.</p></div>
+<div class="card reveal"><h3>Upgrades, backups, hardening</h3><p>Upgrade with a snapshot, health gate and rollback. Backups are verified. Hardening audits can export evidence.</p></div>
+<div class="card reveal"><h3>No phone-home</h3><p>Nothing is sent to us. Support bundles redact secrets and are never uploaded.</p></div>
+</div></div></section>
+
+<section id="network"><div class="wrap">
+<p class="kicker reveal">zkube-net</p>
+<h2 class="reveal">A network you can ask questions.</h2>
+<p class="sub reveal">When traffic is blocked, <code>zkube why net</code> explains the verdict for one source, destination and port, and names the rule that decided it.</p>
+<div class="net reveal"><div class="terminal" role="img" aria-label="Terminal mock of zkube why net command">
+<div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre aria-hidden="true"><span class="dim">$</span> zkube why net SRC DST PORT
+<span class="dim">  Allow or deny, and the rule that decided it.</span>
+<span class="dim">$</span> zkube net ruleset
+<span class="dim">  The compiled nftables ruleset, as the node runs it.</span>
+<span class="dim">$</span> zkube net selftest
+<span class="dim">  A kernel self-test in throwaway namespaces.</span></pre></div></div>
+</div></section>
+
+<section id="quickstart" class="alt"><div class="wrap">
+<p class="kicker reveal">Quickstart</p>
+<h2 class="reveal">Five commands.</h2>
+<div class="net reveal"><div class="terminal" role="img" aria-label="Quickstart commands">
+<div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre><span class="dim">$</span> zkube preflight            <span class="dim"># can this machine run it? read only</span>
+<span class="dim">$</span> zkube plan server          <span class="dim"># exactly what install would do</span>
+<span class="dim">$</span> sudo zkube install server <span class="dim"># K3s, Setura, Gateway API CRDs</span>
+<span class="dim">$</span> sudo zkube doctor --smoke <span class="dim"># including a real request</span>
+<span class="dim">$</span> sudo zkube backup now      <span class="dim"># verified</span></pre></div></div>
+<p class="sub reveal">Air-gapped? Build with <code>zkube bundle</code>, carry the tarball over, install with <code>--offline</code>. Binaries are coming soon; the commands above are what early-access users run.</p>
+</div></section>
+
+<section id="licence"><div class="wrap promise">
+<p class="kicker reveal">The never-brick promise</p>
+<p class="big reveal">The licence never stops a running cluster.</p>
+<p class="sub reveal">The licence is a signed offline key checked locally, with no call home. If it expires or is missing, your running cluster keeps running.</p>
+</div></section>
+
+<section id="status" class="alt"><div class="wrap">
+<p class="kicker reveal">Status</p>
+<h2 class="reveal">Honest about where we are.</h2>
+<p class="sub reveal">Early access. We say what has been run on real machines and what has not.</p>
+<div class="stat">
+<div class="col reveal"><h3><span class="dot"></span>Validated</h3><ul>
+<li>Single-node install with zkube-net on a real Debian 13 VM</li>
+<li>Single-node install with zkube-net on an Ubuntu host</li>
+<li>NetworkPolicy deny and allow</li>
+<li>Add-on stack including KubeVirt</li></ul></div>
+<div class="col reveal"><h3><span class="dot amber"></span>In validation</h3><ul>
+<li>Multi-node overlay networking</li>
+<li>Performance against other CNIs</li>
+<li>VM live migration</li>
+<li>Netra observability add-on</li></ul></div>
+<div class="col reveal"><h3><span class="dot gray"></span>Not yet</h3><ul>
+<li>Public binary downloads: coming soon</li>
+<li>Benchmarks: none published, none claimed</li>
+<li>Production references: none yet</li></ul></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap">
+<p class="kicker reveal">FAQ</p>
+<h2 class="reveal">Questions, answered plainly.</h2>
+<div class="faq">
+<details><summary>Is it K3s?</summary><p>No. Zyvor Kubeza is built on K3s and adds its own tooling and components. K3s is a trademark of SUSE; Kubeza is not affiliated with SUSE or Rancher.</p></details>
+<details><summary>Can I download it?</summary><p>Not yet. Binaries are coming soon. Early access is available to design partners.</p></details>
+<details><summary>Why Setura instead of Traefik?</summary><p>Setura is a Gateway API controller from Zyvor, built into the distribution, so ingress uses the standard Gateway API from day one.</p></details>
+<details><summary>What if my licence expires?</summary><p>Your running cluster keeps running. Only new installs and upgrades are affected.</p></details>
+<details><summary>Does it need the internet?</summary><p>No. Bundles can be built elsewhere and installed offline. Nothing is sent back to Zyvor.</p></details>
+<details><summary>Is the source available?</summary><p>The source repository is private. Early-access users can ask for access.</p></details>
+</div></div></section>
+
+<section id="access" class="alt"><div class="wrap" style="text-align:center">
+<h2 class="reveal">Be early.</h2>
+<p class="sub reveal">To talk to us about early access, get in touch through the Zyvor AI Labs organisation on GitHub.</p>
+<div class="cta"><a class="btn primary" href="https://github.com/zyvorai">Zyvor AI Labs on GitHub</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p>Zyvor Kubeza is under the Zyvor Production Licence v2.0. Production use requires a commercial licence from Zyvor AI Labs Private Limited.</p>
+<p>Early access: features may change, and only what is listed as validated has been run on real machines. Kubernetes is a registered trademark of The Linux Foundation. K3s is a trademark of SUSE. Zyvor Kubeza is built on K3s but is not K3s, and is not affiliated with, endorsed by or sponsored by SUSE or Rancher. Other names are trademarks of their owners.</p>
+<p>&copy; 2026 Zyvor AI Labs Private Limited.</p>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+name: Feedback or question
+description: A question, a correction to this site, or early-access feedback
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What would you like to tell us or ask?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (site type, environment)
+      description: Optional.

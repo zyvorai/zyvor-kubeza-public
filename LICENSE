@@ -1,0 +1,15 @@
+Zyvor Kubeza public repository
+Copyright (c) 2026 Zyvor AI Labs Private Limited. All rights reserved.
+
+This repository contains marketing material only: the README, the website
+under docs/, and the images under social/. It does not contain Zyvor Kubeza
+software. The text and images here may not be copied or redistributed as your
+own without written permission; you may link to and quote them with credit.
+
+Zyvor Kubeza itself (the zkube binary and its components) is licensed under the
+Zyvor Production Licence v2.0 (SPDX: LicenseRef-Zyvor-Production-2.0).
+Production use requires a commercial licence from Zyvor AI Labs Private Limited.
+The full licence text accompanies the software releases.
+
+K3s is a trademark of SUSE. Kubernetes is a registered trademark of The Linux
+Foundation. Other names are trademarks of their owners.

@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:var(--w);height:var(--h);overflow:hidden}
+:root{--w:1200px;--h:630px}
+body{background:#000;color:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;-webkit-font-smoothing:antialiased}
+.g1{position:absolute;left:-120px;top:-260px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,255,.5),transparent 65%)}
+.g2{position:absolute;right:-200px;bottom:-320px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(191,90,242,.42),transparent 65%)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(circle at 70% 50%,#000,transparent 70%)}
+.pad{position:absolute;left:64px;top:0;bottom:0;width:620px;display:flex;flex-direction:column;justify-content:center}
+.brand{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:600;letter-spacing:-.01em}
+.brand svg{width:44px;height:44px}
+h1{font-size:74px;line-height:1.02;letter-spacing:-.045em;font-weight:700;margin-top:34px}
+h1 span{background:linear-gradient(90deg,#2997ff,#bf5af2);-webkit-background-clip:text;background-clip:text;color:transparent}
+p{font-size:27px;color:#a1a1a6;margin-top:26px;letter-spacing:-.01em}
+.pills{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.pills i{font-style:normal;font-size:19px;font-weight:600;padding:7px 16px;border-radius:980px;border:1px solid #3a3a3c;background:rgba(28,28,30,.7)}
+.term{position:absolute;left:720px;top:125px;width:430px;border-radius:22px;background:#161618;border:1px solid #3a3a3c;box-shadow:0 30px 90px rgba(41,151,255,.28);overflow:hidden;transform:rotate(0deg)}
+.bar{display:flex;gap:8px;padding:16px 18px}.bar b{width:12px;height:12px;border-radius:50%;background:#ff5f57}.bar b:nth-child(2){background:#febc2e}.bar b:nth-child(3){background:#28c840}
+pre{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:18px;line-height:1.75;padding:2px 24px 26px;white-space:pre}
+.d{color:#8e8e93}.o{color:#30d158}.h{color:#64d2ff}
+.foot{position:absolute;right:70px;bottom:36px;font-size:18px;color:#6e6e73}
+</style></head><body>
+<div class="g1"></div><div class="g2"></div><div class="grid"></div>
+<div class="pad">
+<div class="brand"><svg viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2997ff"/><stop offset="1" stop-color="#bf5af2"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="#111113" stroke="#3a3a3c"/><path d="M20 14v36M22 32l20-18M22 32l20 18" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Zyvor Kubeza</div>
+<h1>Kubernetes<br>for the edge.<br><span>Made calm.</span></h1>
+<p>Small. Offline-first. Built on K3s.</p>
+<div class="pills"><i>Setura Gateway</i><i>zkube-net CNI</i><i>One binary</i></div>
+</div>
+<div class="term"><div class="bar"><b></b><b></b><b></b></div><pre><span class="d">$</span> zkube plan server
+<span class="d">  Nothing has been changed.</span>
+<span class="d">$</span> sudo zkube install server
+<span class="d">$</span> sudo zkube doctor --smoke
+<span class="o">&#10003;</span> nodes      <span class="o">&#10003;</span> gateway
+<span class="o">&#10003;</span> a real request
+<span class="d">$</span> zkube why net <span class="h">web db 5432</span></pre></div>
+<div class="foot">Zyvor AI Labs</div>
+</body></html>
