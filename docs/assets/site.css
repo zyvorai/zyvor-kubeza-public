@@ -126,3 +126,6 @@ footer p{margin-top:10px;max-width:900px}
 @media(max-width:900px){.stat{grid-template-columns:1fr}}
 .net{max-width:780px;margin:56px auto 0}
 .net .terminal{margin:0;border-bottom:1px solid #3a3a3c;border-radius:20px}
+
+.card code{display:block;margin-top:6px;font-size:12px;line-height:1.45;word-break:break-all;overflow-wrap:anywhere;white-space:normal}
+.grid>.card{min-width:0}
