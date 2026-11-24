@@ -37,6 +37,10 @@ sudo zkube backup now          # verified
 
 Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, then `zkube install server --offline`.
 
+## Download
+
+[**v0.1.0-rc1**](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1): Linux amd64 and arm64 archives, checksums, manifest and SBOM. A pre-release for testing, not for production.
+
 ## Pricing
 
 | Plan | Price |

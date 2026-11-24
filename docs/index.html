@@ -31,6 +31,7 @@
 <header class="nav"><div class="wrap">
 <a class="brand" href="#top"><img src="favicon.svg" alt="" width="22" height="22">Zyvor Kubeza</a>
 <nav aria-label="Primary" style="display:contents">
+<a class="hide-sm" href="#download">Download</a>
 <a class="hide-sm" href="#features">Features</a>
 <a class="hide-sm" href="#network">Network</a>
 <a class="hide-sm" href="#quickstart">Quickstart</a>
@@ -45,7 +46,7 @@
 <p class="eyebrow">Zyvor Kubeza <span class="badge">Early access</span></p>
 <h1>Kubernetes for the edge.<br><span class="grad">Made calm.</span></h1>
 <p class="lede">A small Kubernetes distribution for edge sites and private clouds. Built on K3s, with the gateway and the network already in the box. One binary.</p>
-<div class="cta"><a class="btn primary" href="#access">Request early access</a><a class="btn ghost" href="#quickstart">See the quickstart</a></div>
+<div class="cta"><a class="btn primary" href="#download">Download v0.1.0-rc1</a><a class="btn ghost" href="#quickstart">See the quickstart</a></div>
 <div class="pills" aria-label="Highlights"><span class="pill">Setura Gateway API</span><span class="pill">zkube-net CNI</span><span class="pill">One Go binary</span><span class="pill">Offline-first</span><span class="pill">No phone-home</span></div>
 <div class="terminal" role="img" aria-label="Terminal mock of zkube plan, install and doctor commands" style="margin-top:48px">
 <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -58,6 +59,22 @@
 </div>
 </div>
 </section>
+
+<section id="download" class="alt"><div class="wrap">
+<p class="kicker reveal">Download</p>
+<h2 class="reveal">v0.1.0-rc1, for testing.</h2>
+<p class="sub reveal">A pre-release of the <code>zkube</code> binary for Linux. Use a disposable machine; it is not for production. Source is not public.</p>
+<div class="grid two">
+<div class="card reveal"><h3>Linux amd64</h3><p><a class="btn primary" href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/zkube_v0.1.0-rc1_linux_amd64.tar.gz">Download .tar.gz</a></p><p><code>sha256 f999a03c2021ee1c040b618733f9211a7e796de09b80bfd9d0b01c84ee983242</code></p></div>
+<div class="card reveal"><h3>Linux arm64</h3><p><a class="btn primary" href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/zkube_v0.1.0-rc1_linux_arm64.tar.gz">Download .tar.gz</a></p><p><code>sha256 245d9d6d69698f2ff7414d5e96b8cf1cb33f0a87948760238fb5d4334c866786</code></p></div>
+</div>
+<p class="sub reveal"><a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/checksums.txt">checksums.txt</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/manifest.json">manifest.json</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/sbom.json">sbom.json</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1">Release notes and all files</a></p>
+<div class="net reveal"><div class="terminal" role="img" aria-label="Verify and install commands">
+<div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre><span class="dim">$</span> sha256sum --ignore-missing -c checksums.txt
+<span class="dim">$</span> tar xzf zkube_v0.1.0-rc1_linux_amd64.tar.gz &amp;&amp; sudo install -m755 zkube /usr/local/bin/
+<span class="dim">$</span> sudo zkube preflight --cni zkube &amp;&amp; sudo zkube install server --cni zkube --yes</pre></div></div>
+</div></section>
 
 <section id="why"><div class="wrap">
 <p class="kicker reveal">Why</p>
