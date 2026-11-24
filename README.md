@@ -16,11 +16,14 @@ You run clusters in shops, plants and racks nobody visits. Kubeza picks the piec
 
 - **Built on K3s.** A pinned, checksum-verified upstream K3s underneath. Kubeza does not fork or patch it.
 - **Setura Gateway built in.** The Setura Gateway API controller replaces the default ingress, so you configure traffic with the standard Gateway API from day one.
-- **zkube-net, our own built-in CNI.** nftables NetworkPolicy enforcement, and `zkube why net SRC DST PORT` to explain any allow or deny and name the rule that decided it.
+- **zkube-net, our own built-in CNI.** nftables NetworkPolicy enforcement, VXLAN, hostgw and WireGuard backends, and `zkube why net SRC DST PORT` to explain any allow or deny and name the rule that decided it.
 - **One stdlib-only Go binary.** `zkube` has no third-party dependencies. Install, join nodes, upgrade, back up and audit from one command line.
 - **Offline-first.** Build a bundle with checksums on a connected machine, carry it to an air-gapped site, install with `--offline`.
 - **The licence never stops a running cluster.** The licence is a signed offline key checked locally. If it expires or is missing, a running cluster keeps running.
 - **No phone-home.** Nothing is sent to us. Support bundles redact secrets and are never uploaded.
+- **Preflight, plan and dry-run.** `zkube preflight` says what the node still needs; `zkube plan` and `--dry-run` show what would change before it does.
+- **Tested on multiple nodes.** Two nodes on the VXLAN, hostgw and WireGuard backends and a three-node WireGuard mesh, with deny and allow policy and node drain, on VMs. Real-hardware results are still to come.
+- **A read-only web console.** `zkube ui` shows health, nodes, gateway, backups and security, with username and password sign-in and built-in HTTPS. It only suggests commands. It arrives after v0.1.0-rc1.
 - **Pinned add-ons.** cert-manager, KubeVirt and CDI are pinned to real upstream releases and verified by sha256 when enabled.
 - **Doctor and smoke.** `zkube doctor --smoke` checks nodes, CRDs, the GatewayClass and the controller, then sends a real request.
 - **`--json` everywhere.** Every command with output can emit JSON.

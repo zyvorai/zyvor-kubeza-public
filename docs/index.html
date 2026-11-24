@@ -92,13 +92,16 @@
 <div class="grid">
 <div class="card reveal"><h3>One stdlib-only binary</h3><p><code>zkube</code> is a single Go binary with no third-party dependencies. Install, join nodes, upgrade, back up and audit from one command line.</p></div>
 <div class="card reveal"><h3>Setura Gateway built in</h3><p>The Gateway API CRDs and the Setura controller come with the distribution instead of Traefik. Migration helpers convert existing Ingresses.</p></div>
-<div class="card reveal"><h3>zkube-net, the built-in CNI</h3><p>Our own CNI with nftables NetworkPolicy enforcement and a node self-test. Choose it with <code>--cni zkube</code>.</p></div>
+<div class="card reveal"><h3>zkube-net, the built-in CNI</h3><p>Our own CNI: nftables NetworkPolicy, VXLAN, hostgw or WireGuard between nodes, a node self-test and <code>zkube why net</code>. Choose it with <code>--cni zkube</code>.</p></div>
 <div class="card reveal"><h3>Offline-first</h3><p>Build a bundle with checksums on a connected machine, carry it to an air-gapped site, install with <code>--offline</code>.</p></div>
 <div class="card reveal"><h3>Pinned add-ons</h3><p>cert-manager, KubeVirt and CDI are pinned to real upstream releases and verified by sha256 at enable time.</p></div>
 <div class="card reveal"><h3>Doctor and smoke</h3><p><code>zkube doctor --smoke</code> checks nodes, CRDs, the GatewayClass and the controller, then sends a real request. Every check comes with a fix.</p></div>
 <div class="card reveal"><h3><code>--json</code> everywhere</h3><p>Every command with output can emit JSON, so scripts and fleet tooling never parse prose.</p></div>
 <div class="card reveal"><h3>Upgrades, backups, hardening</h3><p>Upgrade with a snapshot, health gate and rollback. Backups are verified. Hardening audits can export evidence.</p></div>
 <div class="card reveal"><h3>No phone-home</h3><p>Nothing is sent to us. Support bundles redact secrets and are never uploaded.</p></div>
+<div class="card reveal"><h3>Preflight, plan, dry-run</h3><p><code>zkube preflight</code> says what the node still needs. <code>zkube plan</code> and <code>--dry-run</code> show exactly what would change before anything does.</p></div>
+<div class="card reveal"><h3>Tested on multiple nodes</h3><p>Two nodes on the VXLAN, hostgw and WireGuard backends, plus a three-node WireGuard mesh, with deny and allow policy and node drain. Run on VMs; real-hardware results are still to come.</p></div>
+<div class="card reveal"><h3>A read-only web console</h3><p><code>zkube ui</code>: health, nodes, gateway, backups and security, with light and dark themes, a command palette and username and password sign-in with built-in HTTPS. It only suggests commands. Arrives after v0.1.0-rc1.</p></div>
 </div></div></section>
 
 <section id="network"><div class="wrap">
