@@ -6,7 +6,7 @@
 
 A small Kubernetes distribution for edge sites and private clouds, **built on K3s**, with the gateway and the network already in the box. CLI: `zkube`. One binary.
 
-> Early access. Binaries are coming soon. This repository is the public face of the project: overview, status and the website. The source repository is private.
+> Early access. A pre-release for testing is available: [v0.1.0-rc1](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1) (Linux amd64 and arm64, not for production). This repository is the public face of the project: overview, status and the website. The source repository is private.
 
 Site: https://zyvorai.github.io/zyvor-kubeza-public/
 
@@ -43,7 +43,7 @@ Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, th
 |---|---|
 | **Validated** | Single-node install with zkube-net on a real Debian 13 VM and on an Ubuntu host; NetworkPolicy deny and allow; two-node VXLAN pod networking with cross-node policy on two Debian 13 VMs; add-on stack including KubeVirt. |
 | **In validation** | Larger and multi-site clusters, hostgw and WireGuard backends; performance against other CNIs; VM live migration; the Netra observability add-on. |
-| **Not yet** | Public binary downloads (coming soon). No benchmarks are published or claimed. No production references yet. |
+| **Not yet** | Production-ready releases (v0.1.0-rc1 is a pre-release for testing). No benchmarks are published or claimed. No production references yet. |
 
 ## Access
 
