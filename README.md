@@ -41,8 +41,8 @@ Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, th
 
 | | |
 |---|---|
-| **Validated** | Single-node install with zkube-net on a real Debian 13 VM and on an Ubuntu host; NetworkPolicy deny and allow; add-on stack including KubeVirt. |
-| **In validation** | Multi-node overlay networking; performance against other CNIs; VM live migration; the Netra observability add-on. |
+| **Validated** | Single-node install with zkube-net on a real Debian 13 VM and on an Ubuntu host; NetworkPolicy deny and allow; two-node VXLAN pod networking with cross-node policy on two Debian 13 VMs; add-on stack including KubeVirt. |
+| **In validation** | Larger and multi-site clusters, hostgw and WireGuard backends; performance against other CNIs; VM live migration; the Netra observability add-on. |
 | **Not yet** | Public binary downloads (coming soon). No benchmarks are published or claimed. No production references yet. |
 
 ## Access
