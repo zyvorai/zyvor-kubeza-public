@@ -37,6 +37,17 @@ sudo zkube backup now          # verified
 
 Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, then `zkube install server --offline`.
 
+## Pricing
+
+| Plan | Price |
+|---|---|
+| Community | Free: production use up to 4 nodes and 64 cores |
+| Professional | $120 per node per year (₹11,899), minimum 10 nodes |
+| Enterprise | $300 per node per year (₹29,699), 24x7 sev-1 support and long-term backports |
+| Edge fleet | $18 per single-node site per year (₹1,799), from 250 sites; sold once the fleet console exists |
+
+Per node, excluding tax; rupee figures include GST. The licence only warns when over a limit and never stops a running cluster. Ordering opens with the first general release; v0.1.0-rc1 is for testing.
+
 ## Status
 
 | | |
