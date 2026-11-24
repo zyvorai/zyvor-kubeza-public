@@ -104,6 +104,23 @@
 <div class="card reveal"><h3>A read-only web console</h3><p><code>zkube ui</code>: health, nodes, gateway, backups and security, with light and dark themes, a command palette and username and password sign-in with built-in HTTPS. It only suggests commands. Arrives after v0.1.0-rc1.</p></div>
 </div></div></section>
 
+<section id="more"><div class="wrap">
+<p class="kicker reveal">Also in the binary</p>
+<h2 class="reveal">Built, and still being validated.</h2>
+<p class="sub reveal">These are in <code>zkube</code> today. We have not yet run them on real hardware, so treat them as early.</p>
+<div class="grid">
+<div class="card reveal"><h3>Fleet of sites</h3><p>A site agent and a small reference hub: claim codes, signed desired state, rollout rings, revoke and an audit journal.</p></div>
+<div class="card reveal"><h3>First-boot provisioning</h3><p>Bring a node up from a validated site descriptor, with image build, claim and handoff.</p></div>
+<div class="card reveal"><h3>High availability</h3><p>Three servers on embedded etcd, with <code>zkube ha</code> to check and prepare.</p></div>
+<div class="card reveal"><h3>Config as code</h3><p>Describe a site in <code>zkube.yaml</code>, validate it, explain it and apply it. Solution profiles set the gateway and add-ons.</p></div>
+<div class="card reveal"><h3>Signed offline bundles</h3><p>Sign and verify bundles, generate keys and write an SBOM, for air-gapped sites.</p></div>
+<div class="card reveal"><h3>Registry mirror</h3><p>Point the cluster at a local registry for sites with little or no internet.</p></div>
+<div class="card reveal"><h3>Certificates and backups</h3><p>Certificate checks, rotation and an autopilot. Scheduled, verified backups and restore with checks first.</p></div>
+<div class="card reveal"><h3>Ingress migration</h3><p>Convert ingress-nginx and other Ingresses to Gateway API with a staged plan.</p></div>
+<div class="card reveal"><h3>Support bundle</h3><p>Collect logs and facts for support with secrets redacted. Nothing is uploaded.</p></div>
+</div>
+</div></section>
+
 <section id="network"><div class="wrap">
 <p class="kicker reveal">zkube-net</p>
 <h2 class="reveal">A network you can ask questions.</h2>

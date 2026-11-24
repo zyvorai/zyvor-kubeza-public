@@ -44,6 +44,10 @@ Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, th
 
 [**v0.1.0-rc1**](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1): Linux amd64 and arm64 archives, checksums, manifest and SBOM. A pre-release for testing, not for production.
 
+## Also in the binary (still being validated)
+
+Built but not yet run on real hardware: a fleet of sites (site agent and a small reference hub with signed desired state, rollout rings and an audit journal), first-boot provisioning, high availability on embedded etcd, config as code (`zkube.yaml` and profiles), signed offline bundles with SBOM, a local registry mirror, certificate autopilot and scheduled backups, ingress migration to Gateway API, and a redacted support bundle.
+
 ## Pricing
 
 | Plan | Price |
