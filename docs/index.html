@@ -109,9 +109,9 @@
 <h2 class="reveal">Built, and still being validated.</h2>
 <p class="sub reveal">These are in <code>zkube</code> today. We have not yet run them on real hardware, so treat them as early.</p>
 <div class="grid">
-<div class="card reveal"><h3>Fleet of sites</h3><p>A site agent and a small reference hub: claim codes, signed desired state, rollout rings, revoke and an audit journal.</p></div>
+<div class="card reveal"><h3>Fleet of sites</h3><p>A site agent and a small reference hub: claim codes, signed desired state, rollout rings, revoke and an audit journal. Run once on three VMs.</p></div>
 <div class="card reveal"><h3>First-boot provisioning</h3><p>Bring a node up from a validated site descriptor, with image build, claim and handoff.</p></div>
-<div class="card reveal"><h3>High availability</h3><p>Three servers on embedded etcd, with <code>zkube ha</code> to check and prepare.</p></div>
+<div class="card reveal"><h3>High availability</h3><p>Three servers on embedded etcd: convert, join, lose the leader, replace and remove. Run once on three VMs; a real restore has not been run.</p></div>
 <div class="card reveal"><h3>Config as code</h3><p>Describe a site in <code>zkube.yaml</code>, validate it, explain it and apply it. Solution profiles set the gateway and add-ons.</p></div>
 <div class="card reveal"><h3>Signed offline bundles</h3><p>Sign and verify bundles, generate keys and write an SBOM, for air-gapped sites.</p></div>
 <div class="card reveal"><h3>Registry mirror</h3><p>Point the cluster at a local registry for sites with little or no internet.</p></div>

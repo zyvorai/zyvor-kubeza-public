@@ -46,7 +46,7 @@ Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, th
 
 ## Also in the binary (still being validated)
 
-Built but not yet run on real hardware: a fleet of sites (site agent and a small reference hub with signed desired state, rollout rings and an audit journal), first-boot provisioning, high availability on embedded etcd, config as code (`zkube.yaml` and profiles), signed offline bundles with SBOM, a local registry mirror, certificate autopilot and scheduled backups, ingress migration to Gateway API, and a redacted support bundle.
+Built but not yet run on real hardware: a fleet of sites (site agent and a small reference hub with signed desired state, rollout rings and an audit journal; run once on three VMs), high availability on embedded etcd (run once on three VMs, no real restore yet), first-boot provisioning, config as code (`zkube.yaml` and profiles), signed offline bundles with SBOM, a local registry mirror, certificate autopilot and scheduled backups, ingress migration to Gateway API, and a redacted support bundle.
 
 ## Pricing
 
