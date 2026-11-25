@@ -6,7 +6,7 @@
 
 A small Kubernetes distribution for edge sites and private clouds, **built on K3s**, with the gateway and the network already in the box. CLI: `zkube`. One binary.
 
-> Early access. A pre-release for testing is available: [v0.1.0-rc1](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1) (Linux amd64 and arm64, not for production). This repository is the public face of the project: overview, status and the website. The source repository is private.
+> Early access. A pre-release for testing is available: [v0.1.0-rc2](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc2) (Linux amd64 and arm64, not for production). This repository is the public face of the project: overview, status and the website. The source repository is private.
 
 Site: https://zyvorai.github.io/zyvor-kubeza-public/
 
@@ -23,7 +23,7 @@ You run clusters in shops, plants and racks nobody visits. Kubeza picks the piec
 - **No phone-home.** Nothing is sent to us. Support bundles redact secrets and are never uploaded.
 - **Preflight, plan and dry-run.** `zkube preflight` says what the node still needs; `zkube plan` and `--dry-run` show what would change before it does.
 - **Tested on multiple nodes.** Two nodes on the VXLAN, hostgw and WireGuard backends and a three-node WireGuard mesh, with deny and allow policy and node drain, on VMs. Real-hardware results are still to come.
-- **A read-only web console.** `zkube ui` shows health, nodes, gateway, backups and security, with username and password sign-in and built-in HTTPS. It only suggests commands. It arrives after v0.1.0-rc1.
+- **A read-only web console.** `zkube ui` shows health, nodes, gateway, backups and security, with username and password sign-in and built-in HTTPS. It only suggests commands.
 - **Pinned add-ons.** cert-manager, KubeVirt and CDI are pinned to real upstream releases and verified by sha256 when enabled.
 - **Doctor and smoke.** `zkube doctor --smoke` checks nodes, CRDs, the GatewayClass and the controller, then sends a real request.
 - **`--json` everywhere.** Every command with output can emit JSON.
@@ -42,7 +42,7 @@ Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, th
 
 ## Download
 
-[**v0.1.0-rc1**](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1): Linux amd64 and arm64 archives, checksums, manifest and SBOM. A pre-release for testing, not for production.
+[**v0.1.0-rc2**](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc2): Linux amd64 and arm64 archives, checksums, manifest and SBOM. A pre-release for testing, not for production.
 
 ## Also in the binary (still being validated)
 
@@ -57,7 +57,7 @@ Built but not yet run on real hardware: a fleet of sites (site agent and a small
 | Enterprise | $300 per node per year (₹29,699), 24x7 sev-1 support and long-term backports |
 | Edge fleet | $18 per single-node site per year (₹1,799), from 250 sites; sold once the fleet console exists |
 
-Per node, excluding tax; rupee figures include GST. The licence only warns when over a limit and never stops a running cluster. Ordering opens with the first general release; v0.1.0-rc1 is for testing.
+Per node, excluding tax; rupee figures include GST. The licence only warns when over a limit and never stops a running cluster. Ordering opens with the first general release; v0.1.0-rc2 is for testing.
 
 ## Status
 
@@ -65,7 +65,7 @@ Per node, excluding tax; rupee figures include GST. The licence only warns when 
 |---|---|
 | **Validated** | Single-node install with zkube-net on a real Debian 13 VM and on an Ubuntu host; NetworkPolicy deny and allow; two-node VXLAN pod networking with cross-node policy on two Debian 13 VMs; add-on stack including KubeVirt. |
 | **In validation** | Larger and multi-site clusters, hostgw and WireGuard backends; performance against other CNIs; VM live migration; the Netra observability add-on. |
-| **Not yet** | Production-ready releases (v0.1.0-rc1 is a pre-release for testing). No benchmarks are published or claimed. No production references yet. |
+| **Not yet** | Production-ready releases (v0.1.0-rc2 is a pre-release for testing). No benchmarks are published or claimed. No production references yet. |
 
 ## Access
 

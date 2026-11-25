@@ -46,7 +46,7 @@
 <p class="eyebrow">Zyvor Kubeza <span class="badge">Early access</span></p>
 <h1>Kubernetes for the edge.<br><span class="grad">Made calm.</span></h1>
 <p class="lede">A small Kubernetes distribution for edge sites and private clouds. Built on K3s, with the gateway and the network already in the box. One binary.</p>
-<div class="cta"><a class="btn primary" href="#download">Download v0.1.0-rc1</a><a class="btn ghost" href="#quickstart">See the quickstart</a></div>
+<div class="cta"><a class="btn primary" href="#download">Download v0.1.0-rc2</a><a class="btn ghost" href="#quickstart">See the quickstart</a></div>
 <div class="pills" aria-label="Highlights"><span class="pill">Setura Gateway API</span><span class="pill">zkube-net CNI</span><span class="pill">One Go binary</span><span class="pill">Offline-first</span><span class="pill">No phone-home</span></div>
 <div class="terminal" role="img" aria-label="Terminal mock of zkube plan, install and doctor commands" style="margin-top:48px">
 <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -62,17 +62,17 @@
 
 <section id="download" class="alt"><div class="wrap">
 <p class="kicker reveal">Download</p>
-<h2 class="reveal">v0.1.0-rc1, for testing.</h2>
+<h2 class="reveal">v0.1.0-rc2, for testing.</h2>
 <p class="sub reveal">A pre-release of the <code>zkube</code> binary for Linux. Use a disposable machine; it is not for production. Source is not public.</p>
 <div class="grid two">
-<div class="card reveal"><h3>Linux amd64</h3><p><a class="btn primary" href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/zkube_v0.1.0-rc1_linux_amd64.tar.gz">Download .tar.gz</a></p><p><code>sha256 f999a03c2021ee1c040b618733f9211a7e796de09b80bfd9d0b01c84ee983242</code></p></div>
-<div class="card reveal"><h3>Linux arm64</h3><p><a class="btn primary" href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/zkube_v0.1.0-rc1_linux_arm64.tar.gz">Download .tar.gz</a></p><p><code>sha256 245d9d6d69698f2ff7414d5e96b8cf1cb33f0a87948760238fb5d4334c866786</code></p></div>
+<div class="card reveal"><h3>Linux amd64</h3><p><a class="btn primary" href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc2/zkube_v0.1.0-rc2_linux_amd64.tar.gz">Download .tar.gz</a></p><p><code>sha256 23e29d0939b13719804bd20f8153f090d4a8caec521d61a70a87f5fa44e3162b</code></p></div>
+<div class="card reveal"><h3>Linux arm64</h3><p><a class="btn primary" href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc2/zkube_v0.1.0-rc2_linux_arm64.tar.gz">Download .tar.gz</a></p><p><code>sha256 dd6c52fdc8bd397ff03b82ba4dd987bcb9b8a2d608f5fcafc3537e30f2e0fe9f</code></p></div>
 </div>
-<p class="sub reveal"><a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/checksums.txt">checksums.txt</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/manifest.json">manifest.json</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc1/sbom.json">sbom.json</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1">Release notes and all files</a></p>
+<p class="sub reveal"><a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc2/checksums.txt">checksums.txt</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc2/manifest.json">manifest.json</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/download/v0.1.0-rc2/sbom.json">sbom.json</a> · <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc2">Release notes and all files</a></p>
 <div class="net reveal"><div class="terminal" role="img" aria-label="Verify and install commands">
 <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
 <pre><span class="dim">$</span> sha256sum --ignore-missing -c checksums.txt
-<span class="dim">$</span> tar xzf zkube_v0.1.0-rc1_linux_amd64.tar.gz &amp;&amp; sudo install -m755 zkube /usr/local/bin/
+<span class="dim">$</span> tar xzf zkube_v0.1.0-rc2_linux_amd64.tar.gz &amp;&amp; sudo install -m755 zkube /usr/local/bin/
 <span class="dim">$</span> sudo zkube preflight --cni zkube &amp;&amp; sudo zkube install server --cni zkube --yes</pre></div></div>
 </div></section>
 
@@ -101,7 +101,7 @@
 <div class="card reveal"><h3>No phone-home</h3><p>Nothing is sent to us. Support bundles redact secrets and are never uploaded.</p></div>
 <div class="card reveal"><h3>Preflight, plan, dry-run</h3><p><code>zkube preflight</code> says what the node still needs. <code>zkube plan</code> and <code>--dry-run</code> show exactly what would change before anything does.</p></div>
 <div class="card reveal"><h3>Tested on multiple nodes</h3><p>Two nodes on the VXLAN, hostgw and WireGuard backends, plus a three-node WireGuard mesh, with deny and allow policy and node drain. Run on VMs; real-hardware results are still to come.</p></div>
-<div class="card reveal"><h3>A read-only web console</h3><p><code>zkube ui</code>: health, nodes, gateway, backups and security, with light and dark themes, a command palette and username and password sign-in with built-in HTTPS. It only suggests commands. Arrives after v0.1.0-rc1.</p></div>
+<div class="card reveal"><h3>A read-only web console</h3><p><code>zkube ui</code>: health, nodes, gateway, backups and security, with light and dark themes, a command palette and username and password sign-in with built-in HTTPS. It only suggests commands.</p></div>
 </div></div></section>
 
 <section id="more"><div class="wrap">
@@ -145,7 +145,7 @@
 <span class="dim">$</span> sudo zkube install server <span class="dim"># K3s, Setura, Gateway API CRDs</span>
 <span class="dim">$</span> sudo zkube doctor --smoke <span class="dim"># including a real request</span>
 <span class="dim">$</span> sudo zkube backup now      <span class="dim"># verified</span></pre></div></div>
-<p class="sub reveal">Air-gapped? Build with <code>zkube bundle</code>, carry the tarball over, install with <code>--offline</code>. The v0.1.0-rc1 pre-release has the binary; the commands above are what testers run.</p>
+<p class="sub reveal">Air-gapped? Build with <code>zkube bundle</code>, carry the tarball over, install with <code>--offline</code>. The v0.1.0-rc2 pre-release has the binary; the commands above are what testers run.</p>
 </div></section>
 
 <section id="licence"><div class="wrap promise">
@@ -164,7 +164,7 @@
 <div class="card reveal"><h3>Enterprise</h3><p><strong>$300</strong> per node per year (₹29,699). Up to 128 cores per node, 24x7 severity-1 support, a named engineer, long-term backports for the pinned K3s minor, offline bundle service.</p></div>
 <div class="card reveal"><h3>Edge fleet</h3><p><strong>$18</strong> per single-node site per year (₹1,799), from 250 sites. Sold once the fleet console exists.</p></div>
 </div>
-<p class="sub reveal">Paid add-ons such as Netra are priced as their own products. The v0.1.0-rc1 pre-release is for testing; ordering opens with the first general release. See zyvor.dev for the full price list.</p>
+<p class="sub reveal">Paid add-ons such as Netra are priced as their own products. The v0.1.0-rc2 pre-release is for testing; ordering opens with the first general release. See zyvor.dev for the full price list.</p>
 </div></section>
 
 <section id="status" class="alt"><div class="wrap">
@@ -184,7 +184,7 @@
 <li>VM live migration</li>
 <li>Netra observability add-on</li></ul></div>
 <div class="col reveal"><h3><span class="dot gray"></span>Not yet</h3><ul>
-<li>Production-ready releases (v0.1.0-rc1 is a pre-release for testing)</li>
+<li>Production-ready releases (v0.1.0-rc2 is a pre-release for testing)</li>
 <li>Benchmarks: none published, none claimed</li>
 <li>Production references: none yet</li></ul></div>
 </div></div></section>
@@ -194,7 +194,7 @@
 <h2 class="reveal">Questions, answered plainly.</h2>
 <div class="faq">
 <details><summary>Is it K3s?</summary><p>No. Zyvor Kubeza is built on K3s and adds its own tooling and components. K3s is a trademark of SUSE; Kubeza is not affiliated with SUSE or Rancher.</p></details>
-<details><summary>Can I download it?</summary><p>A pre-release for testing, <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc1">v0.1.0-rc1</a>, is on the releases page (Linux amd64 and arm64). It is not for production.</p></details>
+<details><summary>Can I download it?</summary><p>A pre-release for testing, <a href="https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc2">v0.1.0-rc2</a>, is on the releases page (Linux amd64 and arm64). It is not for production.</p></details>
 <details><summary>Why Setura instead of Traefik?</summary><p>Setura is a Gateway API controller from Zyvor, built into the distribution, so ingress uses the standard Gateway API from day one.</p></details>
 <details><summary>What if my licence expires?</summary><p>Your running cluster keeps running. Only new installs and upgrades are affected.</p></details>
 <details><summary>Does it need the internet?</summary><p>No. Bundles can be built elsewhere and installed offline. Nothing is sent back to Zyvor.</p></details>
