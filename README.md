@@ -6,7 +6,7 @@
 
 A small Kubernetes distribution for edge sites and private clouds, **built on K3s**, with the gateway and the network already in the box. CLI: `zkube`. One binary.
 
-> Early access. A pre-release for testing is available: [v0.1.0-rc3](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc3) (Linux amd64 and arm64, not for production). This repository is the public face of the project: overview, status and the website. The source repository is private.
+> Early access. A pre-release for testing is available: [v0.1.0-rc6](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc6) (Linux amd64 and arm64, not for production). This repository is the public face of the project: overview, status and the website. The source repository is private.
 
 Site: https://zyvorai.github.io/zyvor-kubeza-public/
 
@@ -44,7 +44,9 @@ Air-gapped: `zkube bundle --out ./out` on a connected machine, carry it over, th
 
 ## Download
 
-[**v0.1.0-rc3**](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc3): Linux amd64 and arm64 archives, checksums, manifest and SBOM. A pre-release for testing, not for production.
+[**v0.1.0-rc6**](https://github.com/zyvorai/zyvor-kubeza-public/releases/tag/v0.1.0-rc6): Linux amd64 and arm64 archives, checksums, manifest and SBOMs (not signed). A pre-release for testing, not for production.
+
+This build was tested as a single node. Multi-node clusters, upgrade, rollback and the eBPF dataplane were not tested on it; the status table below also reports runs of earlier builds. The release notes list what was run and the known issues.
 
 ## Also in the binary (still being validated)
 
@@ -59,7 +61,7 @@ Built but not yet run on real hardware: a fleet of sites (site agent and a small
 | Enterprise | $300 per node per year (₹29,699), 24x7 sev-1 support and long-term backports |
 | Edge fleet | $18 per single-node site per year (₹1,799), from 250 sites; sold once the fleet console exists |
 
-Per node, excluding tax; rupee figures include GST. The licence only warns when over a limit and never stops a running cluster. Ordering opens with the first general release; v0.1.0-rc3 is for testing.
+Per node, excluding tax; rupee figures include GST. The licence only warns when over a limit and never stops a running cluster. Ordering opens with the first general release; v0.1.0-rc6 is for testing.
 
 ## Status
 
@@ -67,7 +69,7 @@ Per node, excluding tax; rupee figures include GST. The licence only warns when 
 |---|---|
 | **Validated** | Single-node install on a Debian 13 VM and an Ubuntu host; two-node VXLAN, hostgw and WireGuard networking and policy on VMs and a three-node WireGuard mesh; optional eBPF policy enforcement on a two-node arm64 VM cluster; high availability and fleet runs on three VMs; add-on stack including KubeVirt; Netra visibility on one VM. |
 | **In validation** | Larger clusters and real hardware; eBPF on amd64 clusters, other backends, IPv6 and long runs; performance against other CNIs; a real restore of a highly available cluster; VM live migration. |
-| **Not yet** | Production-ready releases (v0.1.0-rc3 is a pre-release for testing). No benchmarks are published or claimed. No production references yet. |
+| **Not yet** | Production-ready releases (v0.1.0-rc6 is a pre-release for testing). No benchmarks are published or claimed. No production references yet. |
 
 ## Access
 
